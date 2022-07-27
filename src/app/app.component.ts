@@ -12,7 +12,9 @@ export class AppComponent {
 
   constructor(public dialog: MatDialog) {}
   openDialog() {
-    const dialogRef = this.dialog.open(DialogComponent);
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '400px'
+    });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
