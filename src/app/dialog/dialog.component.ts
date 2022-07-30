@@ -21,5 +21,9 @@ export class DialogComponent implements OnInit {
       description : ['', Validators.required],
     })
   }
+
+  addProduct(){
+    console.log(this.productForm.value);
+  }
  
 }

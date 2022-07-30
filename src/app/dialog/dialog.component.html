@@ -7,7 +7,7 @@
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>Product Category</mat-label>
-            <mat-select formControlName="category" placeholder="Category">
+            <mat-select formControlName="productCategory" placeholder="Category">
                 <mat-option value="Sticker">Sticker</mat-option>
                 <mat-option value="Poster">Poster</mat-option>
                 <mat-option value="Flyer">Flyer</mat-option>
@@ -26,11 +26,11 @@
           </mat-form-field>
           <mat-form-field appearance="fill">
           <mat-label>Description</mat-label>
-            <textarea matInput></textarea>
+            <textarea matInput formControlName="description"></textarea>
           </mat-form-field>
     </form>
 </div>
 <div mat-dialog-action [align]="'end'">
     <button mat-raised-button color="accent" mat-dialog-close>close</button>
-    <button mat-raised-button color="primary" style="margin-left: 8px;">Save</button>
+    <button mat-raised-button color="primary" style="margin-left: 8px;" (click)="addProduct()">Save</button>
 </div>
